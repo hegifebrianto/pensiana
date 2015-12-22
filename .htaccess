@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /pensiana/
+
+RewriteCond $1 !^(index\.php|assets|backend|robots\.txt)
+RewriteRule ^(.*)$ ./index.php?$1 [L,QSA]
