@@ -17,6 +17,7 @@ class Posting extends CI_Controller {
 	{
 		$this->data['title'] = 'Posting User';
         $this->data['username'] = $this->session->userdata('username');
+        $this->data['categories'] = $this->kategori_model->getAllKategori();
         $this->load->view('posting/v_posting', $this->data);
 
         	$this->data['username'] = $this->session->userdata('username');	
